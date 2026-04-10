@@ -1,0 +1,295 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdfaf7;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: #ca8888;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #86505b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #e11d48;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #6b7280;
+}
+
+/* =========================
+   HERO TEXT
+========================= */
+.hero-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  max-width: 600px;
+  margin: auto;
+  color: #6b7280;
+}
+
+.hero-text .button {
+  margin-top: 15px;
+}
+
+/* =========================
+   GRID & CARD
+========================= */
+.grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+}
+
+.food-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.desc {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  color: #e11d48;
+  font-weight: 600;
+}
+
+.button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #e11d48;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #be123c;
+}
+
+/* =========================
+   FORM
+========================= */
+.form {
+  max-width: 400px;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #fff1f2, #e9c1c4);
+  color: #000000;
+  border-top: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+.carousel {
+  position: relative;
+  height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.6s ease;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+}
+
+.carousel-content h1 {
+  font-size: 30px;
+}
+
+.carousel-content p {
+  font-size: 14px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-dot.active {
+  background: #e11d48;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .container {
+    padding: 30px 20px;
+  }
+}
